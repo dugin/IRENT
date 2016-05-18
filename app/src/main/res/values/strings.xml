@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">IRENT</string>
+
+
+    <string name="tenho_carro">Tenho Carro</string>
+    <string name="quero_carro">Quero carro</string>
+
+
+    <string name="facebook_app_id">589507941216859</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
