@@ -57,7 +57,7 @@ public class FacebookUtil {
             @Override
             protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken, AccessToken currentAccessToken) {
 
-                ref = new Firebase("https://irent.firebaseio.com/");
+                ref = FirebaseUtil.getFirebase().getRef();
 
 
                 onFacebookAccessTokenChange(currentAccessToken);
@@ -128,10 +128,12 @@ public class FacebookUtil {
                     ref.child("usuarios").child(authData.getUid()).setValue(mapaBD);
 
                     prefManager.setIsLogged(true);
+                    prefManager.setFacebookFirebaseID(authData.getUid());
 
                     MessageEB m = new MessageEB(TAG);
 
                     EventBus.getDefault().post(m);
+
 
                     // The Facebook user is now authenticated with your Firebase app
                 }

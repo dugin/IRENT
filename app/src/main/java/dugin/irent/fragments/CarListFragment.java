@@ -25,6 +25,8 @@ public class CarListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_car_list, container, false);
+
+
     }
 
 }

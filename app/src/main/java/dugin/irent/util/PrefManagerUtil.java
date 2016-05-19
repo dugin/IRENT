@@ -13,6 +13,7 @@ public class PrefManagerUtil {
     private static final String PREF_NAME_1 = "MainActivity";
     private static final String PREF_NAME_2 = "FacebookUtil";
 
+    private static final String FACEBOOK_FIREBASE_ID = "FacebookFirebaseID";
 
     private static final String MEU_NOME = "nome";
     private static final String MINHA_IMG = "imgURL";
@@ -72,6 +73,18 @@ public class PrefManagerUtil {
 
 
     }
+
+    public String getFacebookFirebaseID() {
+
+        return pref.getString(FACEBOOK_FIREBASE_ID, null);
+    }
+
+    public void setFacebookFirebaseID(String facebookFirebaseID) {
+        editor.putString(FACEBOOK_FIREBASE_ID, facebookFirebaseID);
+        editor.commit();
+    }
+
+
 
     public boolean getIsLogged() {
 
